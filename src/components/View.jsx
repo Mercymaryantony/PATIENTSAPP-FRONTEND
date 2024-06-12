@@ -5,7 +5,7 @@ import axios from 'axios'
 const View = () => {
     const[data,changedata]=useState([])
     const fetchdata = ()=>{
-       axios.get("http://localhost:8081/view").then(
+       axios.post("http://localhost:8081/view",data).then(
         (response)=>{
             changedata(response.data)
         }
@@ -14,7 +14,8 @@ const View = () => {
             console.log(error.message)
             alert(error.message)
         }
-       )
+       ).finally()
+       console.log(data)
     }
     useEffect(()=>{fetchdata()},[])
   return (
