@@ -8,6 +8,7 @@ const View = () => {
        axios.get("http://localhost:8081/view").then(
         (response)=>{
             changedata(response.data)
+            console.log(data)
         }
        ).catch(
         (error)=>{
