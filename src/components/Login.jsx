@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
 const Login = () => {
-    const [data,setdata]=useState({
-        "name":"",
-        "pass":""
+    const [data, setdata] = useState({
+        "name": "",
+        "pass": ""
     })
-    const inputhandler =(event)=>{
-        setdata({...data,[event.target.name]:event.target,value})
+    const inputhandler = (event) => {
+        setdata({ ...data, [event.target.name]: event.target, value })
     }
 
-    }
-  return (
+
+return (
     <div>
         <div className="container">
             <div className="row">
@@ -35,7 +35,7 @@ const Login = () => {
             </div>
         </div>
     </div>
-  )
+)
 }
 
 export default Login
